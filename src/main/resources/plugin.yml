@@ -1,0 +1,6 @@
+name: CommandBlockPermissions
+version: ${project.version}
+authors: [Uxzylon]
+main: com.gmail.anthony17j.commandblockpermissions.CommandBlockPermissions
+api-version: 1.17
+depend: [ProtocolLib]
