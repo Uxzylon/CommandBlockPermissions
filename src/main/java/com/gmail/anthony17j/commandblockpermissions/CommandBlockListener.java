@@ -8,6 +8,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandMap;
 
 import java.lang.reflect.Field;
+import java.util.logging.Level;
 
 public class CommandBlockListener extends PacketAdapter {
 	private final CommandBlockPermissions cbp;
@@ -44,11 +45,18 @@ public class CommandBlockListener extends PacketAdapter {
 				if (e.getPlayer().hasPermission(command.getPermission())) {
 					return;
 				}
+			} else {
+				//plugin.getLogger().warning("Failed to check permissions for command '" + commandName + "'!");
+				if (e.getPlayer().hasPermission("cbPerm." + commandName)) {
+					return;
+				}
 			}
-		} else {
-			//plugin.getLogger().log(Level.WARNING, "Failed to check permissions for command '" + commandName + "'!");
-			return;
-		}
+		} /*else {
+			plugin.getLogger().warning("Failed to check permissions for command '" + commandName + "'!");
+		}*/
+
+
+
 		e.setCancelled(true);
 		e.getPlayer().sendMessage(ChatColor.RED + "Vous ne pouvez pas utiliser des commandes dont vous n'avez pas la permission dans un command block.");
 	}

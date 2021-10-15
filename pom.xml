@@ -6,7 +6,7 @@
 
     <groupId>com.gmail.anthony17j</groupId>
     <artifactId>CommandBlockPermissions</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <name>CommandBlockPermissions</name>
@@ -43,7 +43,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.1</version>
                 <configuration>
-                    <outputDirectory>C:\Users\Antho\Downloads\spigot_server_test\plugins</outputDirectory>
+                    <outputDirectory>C:\Users\Antho\Desktop\spigot_server_test\plugins</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
